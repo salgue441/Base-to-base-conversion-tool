@@ -90,7 +90,7 @@ int main()
             std::getline(std::cin, input_number_string);
 
             std::cout << "RESULT: "
-                      << convert_bases(input_number_string, 2, 10)
+                      << convert_bases(input_number_string, 2, 16)
                       << std::endl
                       << std::endl;
 
@@ -114,9 +114,15 @@ int main()
         case 7: // free base to base conversion
         {
             int original_base{}, desired_base{};
-            std::cout << "Type the number in base 16: ";
+            std::cout << "Type the number: ";
             std::cin.ignore();
             std::getline(std::cin, input_number_string);
+
+            std::cout << "Type the original base: ";
+            std::cin >> original_base;
+
+            std::cout << "Type the desired base: ";
+            std::cin >> desired_base;
 
             std::cout << "RESULT: "
                       << convert_bases(input_number_string, original_base, desired_base)
